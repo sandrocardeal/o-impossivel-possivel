@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>O Impossível Possível 💀</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="game-title">O IMPOSSÍVEL POSSÍVEL 💀</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span>Pontos: </span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span>Tentativas: </span>
+                    <span id="attempts">0</span>
+                </div>
+                <div class="stat">
+                    <span>Nível: </span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat">
+                    <span>Vidas: </span>
+                    <span id="lives">♥♥♥</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <div class="player" id="player"></div>
+            <div class="obstacles" id="obstacles"></div>
+            <div class="collectibles" id="collectibles"></div>
+
+            <div class="invisible-wall" id="invisibleWall"></div>
+        </div>
+
+        <div class="controls">
+            <div class="control-buttons">
+                <button class="control-btn" id="leftBtn">←</button>
+                <button class="control-btn" id="upBtn">↑</button>
+                <button class="control-btn" id="downBtn">↓</button>
+                <button class="control-btn" id="rightBtn">→</button>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn" id="startBtn">COMEÇAR</button>
+                <button class="action-btn" id="helpBtn">AJUDA (NÃO CLIQUE)</button>
+                <button class="action-btn" id="pauseBtn">PAUSAR</button>
+            </div>
+        </div>
+
+        <div class="troll-messages" id="trollMessages">
+            <div class="message-bubble" id="messageBubble">
+                Prepare-se para a frustração suprema! 😈
+            </div>
+        </div>
+
+        <div class="fake-game-over" id="fakeGameOver">
+            <h2>GAME OVER! 💀</h2>
+            <p>Você é terrível nisso...</p>
+            <button id="fakeRestartBtn">Tentar Novamente (se conseguir)</button>
+        </div>
+
+        <div class="real-game-over" id="realGameOver">
+            <h2>SÓ BRINCANDO! 😂</h2>
+            <p>Continue jogando, você quase conseguiu!</p>
+            <button id="realRestartBtn">Continuar Sofrendo</button>
+        </div>
+
+        <div class="achievement-popup" id="achievementPopup">
+            <h3>CONQUISTA DESBLOQUEADA!</h3>
+            <p id="achievementText"></p>
+        </div>
+
+        <div class="tutorial-popup" id="tutorialPopup" style="display: none;">
+            <h3>📚 TUTORIAL OFICIAL</h3>
+            <p>1. Para mover mais rápido, segure Shift + Ctrl + Alt</p>
+            <p>2. Para ativar modo invencível, digite "GODMODE" no chat</p>
+            <p>3. Para pular obstáculos, pressione Espaço duas vezes</p>
+            <p>4. Para salvar automaticamente, pressione F5 constantemente</p>
+            <p>5. Para melhor performance, feche outras abas</p>
+            <button onclick="document.getElementById('tutorialPopup').style.display='none'">Entendi! 🤡</button>
+        </div>
+    </div>
+
+    <script type="module" src="./src/ui.js"></script>
+    <script type="module" src="./src/troll-mechanics.js"></script>
+    <script type="module" src="./src/game.js"></script>
+</body>
+
+</html>
